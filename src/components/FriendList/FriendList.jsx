@@ -4,7 +4,6 @@ import s from "./friendList.module.css"
 import FriendsListGroup from "./FriendsListGroup.jsx";
 
 const FriendsList = ({friends}) => {
-    console.log(friends);
     const elements = friends.map(({id, ...props}) => <FriendsListGroup key={id} {...props} />);
 
     return (<ul className={s.friendList}>
@@ -20,7 +19,7 @@ FriendsList.defaultProps = {
 }
 FriendsList.propTypes = {
     friends: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.string.isRequired,
+        id: PropTypes.number.isRequired,
         avatar: PropTypes.string.isRequired,
         isOnline: PropTypes.bool.isRequired,
         name: PropTypes.string.isRequired,
