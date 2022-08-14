@@ -1,0 +1,26 @@
+.transactionHistory {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    border-collapse: collapse;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    box-shadow: 0 0 0 1px #5d8aa8, 0 0 4px #5d8aa8;
+    text-align: center;
+    }
+td, th {
+    padding: 4px; 
+    border: 1px solid #5d8aa8; 
+    }
+table td:first-child {
+    text-align: left;
+}
+th {
+    color: aliceblue;
+    background: #3879a5;
+    font-weight: 500;
+    font-size: 20px;
+}
+table th:first-child {
+    text-align: left;
+}
