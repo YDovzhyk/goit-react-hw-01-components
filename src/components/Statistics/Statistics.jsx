@@ -6,16 +6,8 @@ const Statistics = ({title, stats}) => {
         return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
         }
 
-    function hideElement(title) {
-        if (title !== "undefined") {
-            return "visible";
-        } else {
-            return "hidden"
-        }
-    }
-
     return (<section className={s.statistics}>
-    <h2 className={s.title} style={{visibility: hideElement(title)}}>{title}</h2>
+    {title&&<h2 className={s.title}>{title}</h2>}
     <ul className={s.statlist}>
         {stats.map(({id, ...props}) =>
         <li key={id} className={s.item} style={{backgroundColor: getRandomHexColor()}}>
@@ -30,7 +22,6 @@ const Statistics = ({title, stats}) => {
 export default Statistics;
 
 Statistics.defaultProps = {
-    title: "undefined",
     stats: []
     }
 
