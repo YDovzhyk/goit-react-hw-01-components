@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import s from "./friendList.module.css"
 
-const FriendsListGroup = ({avatar, name, isOnline}) => {
+const FriendListItem = ({avatar, name, isOnline}) => {
     function isUserOnline () {
         if (isOnline) {
             return '#19e016';
@@ -16,11 +16,11 @@ const FriendsListGroup = ({avatar, name, isOnline}) => {
     </li>);
 }
 
-export default FriendsListGroup;
+export default FriendListItem;
 
-FriendsListGroup.defaultProps = {};
+FriendListItem.defaultProps = {};
 
-FriendsListGroup.propTypes = {
+FriendListItem.propTypes = {
     avatar: PropTypes.string.isRequired,
     isOnline: PropTypes.bool.isRequired,
     name: PropTypes.string.isRequired,
